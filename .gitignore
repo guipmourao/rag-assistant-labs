@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+backend/python-api/uploads/*
+!backend/python-api/uploads/.gitkeep
+.env
