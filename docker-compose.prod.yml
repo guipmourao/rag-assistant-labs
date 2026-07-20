@@ -1,0 +1,13 @@
+services:
+  api:
+    container_name: vps-vnode-rag-api
+    restart: unless-stopped
+    networks:
+      default:
+        aliases:
+          - vnode-rag-api
+
+networks:
+  default:
+    name: vps_network
+    external: true
