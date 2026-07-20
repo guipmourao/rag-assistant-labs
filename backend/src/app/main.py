@@ -14,7 +14,7 @@ load_dotenv()
 settings = get_settings()
 configure_logging()
 
-app = FastAPI(title=settings.app_name)
+app = FastAPI(title=settings.app_name, root_path=settings.root_path)
 
 app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)

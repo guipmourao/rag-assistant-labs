@@ -14,6 +14,7 @@ class Settings(BaseSettings):
     cors_origins: list[str] = ["*"]
     log_level: str = "INFO"
     api_key: str | None = None
+    root_path: str = ""
 
 
 @lru_cache

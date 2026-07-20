@@ -1,11 +1,11 @@
 services:
   api:
-    container_name: vps-vnode-rag-api
+    container_name: vps-vnode-rag-api-labs
     restart: unless-stopped
     networks:
       default:
         aliases:
-          - vnode-rag-api
+          - vnode-rag-api-labs
 
 networks:
   default:

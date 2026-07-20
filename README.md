@@ -99,6 +99,10 @@ reverse proxy uses) instead of publishing a port on the host:
 docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
 ```
 
+If the app is served under a path prefix (e.g. `https://example.com/labs/rag/`), set
+`ROOT_PATH` in `.env` to that prefix so the generated docs and OpenAPI schema use the
+right URLs, and configure the reverse proxy to strip the prefix before forwarding.
+
 ## Known limitations
 
 - No automated test suite yet.
